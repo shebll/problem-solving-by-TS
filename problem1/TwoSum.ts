@@ -4,8 +4,8 @@ function twoSum(nums: number[], target: number): number[] {
     for (let j = 0; j < nums.length; j++) {
       if (
         nums[i] + nums[j] == target &&
-        !res.includes(i) &&
-        !res.includes(j) &&
+        res.indexOf(i) == -1 &&
+        res.indexOf(j) == -1 &&
         i != j
       ) {
         res.push(i);
@@ -16,4 +16,4 @@ function twoSum(nums: number[], target: number): number[] {
   return res;
 }
 
-console.log(twoSum([1, 2, 3], 3));
+console.log(twoSum([2, 7, 11, 15], 9));
